@@ -9,10 +9,16 @@ import WhyChooseUs from "./pages/why-choose-us";
 import Contact from "./pages/contact";
 import { store } from "./redux/store";
 
+const viteBase = import.meta.env.BASE_URL;
+const routerBasename =
+  viteBase !== "/"
+    ? viteBase.replace(/\/$/, "") || "/"
+    : BASE_NAME;
+
 function AppRoutes() {
   return (
     <Provider store={store}>
-      <BrowserRouter basename={BASE_NAME}>
+      <BrowserRouter basename={routerBasename}>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />

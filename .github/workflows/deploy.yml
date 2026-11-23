@@ -36,6 +36,8 @@ jobs:
 
       - name: 🏗 Build Project
         run: npm run build
+        env:
+          VITE_BASE: /artheatingncooling/
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
