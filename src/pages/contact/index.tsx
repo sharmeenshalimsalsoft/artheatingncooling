@@ -2,6 +2,7 @@ import { BUSINESS } from "../../constants/content";
 import PageHero from "../../components/sections/PageHero";
 import ContactSection from "../../components/sections/ContactSection";
 import { ClockIcon, MailIcon, MapPinIcon, PhoneIcon } from "../../components/icons/Icons";
+import { publicAsset } from "../../utils/publicAsset";
 
 const Contact = () => {
   return (
@@ -10,7 +11,7 @@ const Contact = () => {
         eyebrow="Contact Us"
         title="Get in Touch"
         description="Request a free quote for HVAC or plumbing service in Cincinnati and surrounding areas."
-        image="/images/contact-bg.jpg"
+        image={publicAsset("images/contact-bg.jpg")}
       />
 
       <section className="bg-white py-10 sm:py-12">
