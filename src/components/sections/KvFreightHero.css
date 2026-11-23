@@ -1,0 +1,300 @@
+.kv-track {
+  --kv-ink: #071c35;
+  --kv-navy: #0d2946;
+  --kv-orange: #f45a0a;
+  --kv-bright: #ff7900;
+  --kv-cream: #efeee9;
+  --kv-letters: #e4e2db;
+  --kv-u: min(100vw / 1440, 100vh / 960);
+  --edge-px: 58vh;
+  --ph: 0;
+  position: relative;
+  width: 100%;
+  background: var(--kv-cream);
+  color: var(--kv-ink);
+  overflow-x: clip;
+}
+
+.kv-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--kv-u) * 13) calc(var(--kv-u) * 27);
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  font-size: calc(var(--kv-u) * 17);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "Archivo", system-ui, sans-serif;
+}
+
+.kv-scene {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100lvh;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--kv-cream) 0,
+    var(--kv-cream) var(--edge-px),
+    var(--kv-ink) var(--edge-px),
+    var(--kv-navy) 100%
+  );
+}
+
+.kv-van {
+  position: absolute;
+  z-index: 5;
+  left: 36%;
+  bottom: 42%;
+  width: min(24vw, 380px);
+  height: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  will-change: left, bottom, width;
+  filter: drop-shadow(0 14px 28px rgba(7, 28, 53, 0.28));
+}
+
+.kv-letters {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: calc(100% - var(--edge-px));
+  transform: translate3d(100vw, 0, 0);
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: calc(var(--kv-u) * 330);
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: var(--kv-letters);
+  white-space: nowrap;
+  mix-blend-mode: darken;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.kv-speed {
+  position: absolute;
+  top: calc(var(--kv-u) * 52);
+  left: calc(var(--kv-u) * 26);
+  z-index: 5;
+  margin: 0;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: calc(var(--kv-u) * 10.5);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--kv-navy);
+  opacity: var(--ph);
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.kv-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--edge-px);
+  bottom: 0;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.kv-strip {
+  position: absolute;
+  top: calc(var(--kv-u) * 13);
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: calc(var(--kv-u) * 53);
+  color: var(--kv-cream);
+  transform: translate3d(100vw, 0, 0);
+  will-change: transform;
+  padding-right: calc(var(--kv-u) * 40);
+}
+
+.kv-lead {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--kv-u) * 33);
+  flex-shrink: 0;
+}
+
+.kv-headline {
+  margin: 0;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: calc(var(--kv-u) * 107);
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  white-space: pre-line;
+  color: var(--kv-cream);
+}
+
+.kv-headline-accent {
+  color: var(--kv-orange);
+}
+
+.kv-lead-copy {
+  width: calc(var(--kv-u) * 417);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--kv-u) * 17);
+}
+
+.kv-lead-copy p {
+  margin: 0;
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: calc(var(--kv-u) * 20);
+  line-height: 1.35;
+  color: rgba(239, 238, 233, 0.72);
+}
+
+.kv-cards {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.kv-card {
+  width: calc(var(--kv-u) * 450);
+  padding: 0 calc(var(--kv-u) * 56);
+  box-sizing: border-box;
+  border-left: 1px solid rgba(239, 238, 233, 0.14);
+}
+
+.kv-card:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.kv-card + .kv-card {
+  margin-left: calc(var(--kv-u) * 28);
+}
+
+.kv-card-icon {
+  width: calc(var(--kv-u) * 63);
+  height: calc(var(--kv-u) * 63);
+  margin-bottom: calc(var(--kv-u) * 23);
+  color: var(--kv-orange);
+}
+
+.kv-card-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  stroke-width: 1.2;
+}
+
+.kv-card-title {
+  margin: 0 0 calc(var(--kv-u) * 13);
+  font-family: "Anton", Impact, sans-serif;
+  font-size: calc(var(--kv-u) * 43);
+  line-height: 1;
+  white-space: pre-line;
+}
+
+.kv-card-body {
+  margin: 0;
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: calc(var(--kv-u) * 21);
+  line-height: 1.35;
+}
+
+.kv-card-title,
+.kv-card-body {
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--kv-cream) 0%,
+    var(--kv-cream) var(--kv-s-white, 0%),
+    var(--kv-orange) var(--kv-s-orange, 0%),
+    transparent var(--kv-s-clear, 100%)
+  );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.kv-services-pill {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--kv-u) * 16);
+  transform: translate(-50%, calc((1 - var(--ph)) * 24px));
+  opacity: var(--ph);
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+  z-index: 6;
+  color: var(--kv-cream);
+  border-color: rgba(239, 238, 233, 0.55);
+  pointer-events: none;
+}
+
+@media (max-width: 767px), (max-aspect-ratio: 1/1) {
+  .kv-track {
+    --kv-u: min(100vw / 430, 1.4px);
+  }
+
+  .kv-letters {
+    font-size: calc(var(--kv-u) * 180);
+  }
+
+  .kv-speed {
+    top: 22px;
+    left: 20px;
+    font-size: 11px;
+  }
+
+  .kv-strip {
+    top: calc(var(--kv-u) * 9);
+    gap: calc(var(--kv-u) * 27);
+    padding-left: 22px;
+  }
+
+  .kv-lead {
+    flex-direction: column;
+    gap: calc(var(--kv-u) * 16);
+  }
+
+  .kv-headline {
+    font-size: calc(var(--kv-u) * 67);
+  }
+
+  .kv-lead-copy {
+    width: calc(var(--kv-u) * 300);
+  }
+
+  .kv-lead-copy p {
+    font-size: calc(var(--kv-u) * 16);
+  }
+
+  .kv-card {
+    width: calc(var(--kv-u) * 300);
+  }
+
+  .kv-card-icon {
+    width: calc(var(--kv-u) * 47);
+    height: calc(var(--kv-u) * 47);
+  }
+
+  .kv-card-title {
+    font-size: calc(var(--kv-u) * 33);
+  }
+
+  .kv-card-body {
+    font-size: calc(var(--kv-u) * 16);
+  }
+
+  .kv-pill {
+    font-size: calc(var(--kv-u) * 9);
+    padding: calc(var(--kv-u) * 6) calc(var(--kv-u) * 12);
+  }
+}
