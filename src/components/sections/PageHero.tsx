@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { easeOut } from "../motion/Reveal";
+import { publicAsset } from "../../utils/publicAsset";
 
 type PageHeroProps = {
   eyebrow?: string;
@@ -12,7 +13,7 @@ const PageHero = ({
   eyebrow,
   title,
   description,
-  image = "/images/hero.jpg",
+  image = publicAsset("images/hero.jpg"),
 }: PageHeroProps) => {
   return (
     <section className="relative overflow-hidden bg-deep-navy py-12 sm:py-14">

@@ -8,6 +8,7 @@ import {
   ZapIcon,
 } from "../icons/Icons";
 import { easeOut, springSoft } from "../motion/Reveal";
+import { publicAsset } from "../../utils/publicAsset";
 
 const whyIcons = {
   shield: ShieldCheckIcon,
@@ -71,7 +72,7 @@ const AboutSection = ({ showWhyPanel = true }: AboutSectionProps) => {
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy">
                 <motion.img
-                  src="/images/about-hvac.jpg"
+                  src={publicAsset("images/about-hvac.jpg")}
                   alt="HVAC technician servicing an outdoor air conditioning unit"
                   className="h-full w-full object-cover object-center"
                   loading="lazy"

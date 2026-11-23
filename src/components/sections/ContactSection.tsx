@@ -10,6 +10,7 @@ import {
 } from "../icons/Icons";
 import { easeOut, springSoft } from "../motion/Reveal";
 import "./ContactSection.css";
+import { publicAsset } from "../../utils/publicAsset";
 
 type FormState = {
   name: string;
@@ -94,7 +95,7 @@ const ContactSection = () => {
       <div id="quote" className="absolute top-0 h-0 w-0" aria-hidden />
       <div
         className="absolute inset-0 bg-cover bg-center opacity-[0.22]"
-        style={{ backgroundImage: "url(/images/contact-bg.jpg)" }}
+        style={{ backgroundImage: `url(${publicAsset("images/contact-bg.jpg")})` }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-deep-navy/72" aria-hidden />

@@ -1,3 +1,5 @@
+import { publicAsset } from "../utils/publicAsset";
+
 export const BUSINESS = {
   name: "A.T.R Heating and Cooling",
   shortName: "A.T.R",
@@ -65,7 +67,7 @@ export const SERVICES = [
     title: "Heating Services",
     description:
       "Keep your property warm and comfortable with reliable heating services and professional solutions.",
-    image: "/images/service-heating.jpg",
+    image: publicAsset("images/service-heating.jpg"),
     icon: "flame",
   },
   {
@@ -73,7 +75,7 @@ export const SERVICES = [
     title: "Cooling Services",
     description:
       "Stay comfortable during warmer months with dependable air conditioning and cooling solutions.",
-    image: "/images/service-cooling.jpg",
+    image: publicAsset("images/service-cooling.jpg"),
     icon: "snowflake",
   },
   {
@@ -81,7 +83,7 @@ export const SERVICES = [
     title: "HVAC Installation",
     description:
       "Professional HVAC installation solutions designed to deliver reliable performance and indoor comfort.",
-    image: "/images/service-installation.jpg",
+    image: publicAsset("images/service-installation.jpg"),
     icon: "wrench",
   },
   {
@@ -89,7 +91,7 @@ export const SERVICES = [
     title: "HVAC Maintenance",
     description:
       "Help maintain system efficiency and prevent unexpected issues with routine HVAC maintenance.",
-    image: "/images/service-maintenance.jpg",
+    image: publicAsset("images/service-maintenance.jpg"),
     icon: "settings",
   },
   {
@@ -97,7 +99,7 @@ export const SERVICES = [
     title: "HVAC Repairs",
     description:
       "Get your heating and cooling systems back on track with dependable troubleshooting and repair services.",
-    image: "/images/service-repairs.jpg",
+    image: publicAsset("images/service-repairs.jpg"),
     icon: "tool",
   },
   {
@@ -105,7 +107,7 @@ export const SERVICES = [
     title: "Plumbing Services",
     description:
       "Reliable plumbing solutions for everyday issues, repairs, and plumbing installations.",
-    image: "/images/service-plumbing.jpg",
+    image: publicAsset("images/service-plumbing.jpg"),
     icon: "droplets",
   },
 ] as const;

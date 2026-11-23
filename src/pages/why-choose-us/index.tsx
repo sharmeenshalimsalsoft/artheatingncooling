@@ -3,6 +3,7 @@ import PageHero from "../../components/sections/PageHero";
 import CredentialsBanner from "../../components/sections/CredentialsBanner";
 import ContactSection from "../../components/sections/ContactSection";
 import Button from "../../components/ui/Button";
+import { publicAsset } from "../../utils/publicAsset";
 import {
   BuildingIcon,
   ShieldCheckIcon,
@@ -74,7 +75,7 @@ const WhyChooseUs = () => {
             </div>
             <div className="overflow-hidden rounded-2xl">
               <img
-                src="/images/why-choose.jpg"
+                src={publicAsset("images/why-choose.jpg")}
                 alt="HVAC technician providing professional service"
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"

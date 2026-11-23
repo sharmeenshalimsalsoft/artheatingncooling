@@ -1,9 +1,10 @@
 import { motion } from "motion/react";
 import Button from "../ui/Button";
 import { easeOut, springSoft } from "../motion/Reveal";
+import { publicAsset } from "../../utils/publicAsset";
 
-const BG_URL = "/images/hero-bg.jpg";
-const PORTRAIT_URL = "/images/atr-technician-cutout.png";
+const BG_URL = publicAsset("images/hero-bg.jpg");
+const PORTRAIT_URL = publicAsset("images/atr-technician-cutout.png");
 
 const MARQUEE_TEXT = "A.T.R \u2014 Heating\u00A0";
 

@@ -3,6 +3,7 @@ import PageHero from "../../components/sections/PageHero";
 import CredentialsBanner from "../../components/sections/CredentialsBanner";
 import ContactSection from "../../components/sections/ContactSection";
 import Button from "../../components/ui/Button";
+import { publicAsset } from "../../utils/publicAsset";
 
 const About = () => {
   return (
@@ -11,14 +12,14 @@ const About = () => {
         eyebrow="About A.T.R"
         title="A Trusted Local HVAC & Plumbing Contractor"
         description="Locally operated sole proprietorship serving Cincinnati homeowners and businesses."
-        image="/images/about.jpg"
+        image={publicAsset("images/about.jpg")}
       />
 
       <section className="bg-white py-12 sm:py-14 lg:py-16">
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="overflow-hidden rounded-2xl">
             <img
-              src="/images/about.jpg"
+              src={publicAsset("images/about.jpg")}
               alt="Residential HVAC unit beside a home"
               className="aspect-[4/3] w-full object-cover"
             />

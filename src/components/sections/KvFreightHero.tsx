@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import "./KvFreightHero.css";
 
-const VAN_SRC = "/images/atr-service-van.png";
+import { publicAsset } from "../../utils/publicAsset";
+
+const VAN_SRC = publicAsset("images/atr-service-van.png");
 
 /** Scroll length for vehicle pullback (in viewports). */
 const A = 1.55;
